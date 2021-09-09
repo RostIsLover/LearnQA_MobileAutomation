@@ -10,6 +10,6 @@ public class MainClassTest extends MainClass {
 
     @Test
     public void testGetClassNumber() {
-        Assert.assertTrue("Метод getClassNumber вернул значение не больше 45", getClassNumber() <= 45);
+        Assert.assertTrue("Метод getClassNumber вернул число не больше 45: " + getClassNumber(), getClassNumber() > 45);
     }
 }
