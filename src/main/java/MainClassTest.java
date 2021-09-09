@@ -1,11 +1,15 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MainClassTest {
+public class MainClassTest extends MainClass {
 
     @Test
     public void testGetLocalNumber() {
-        MainClass mainClass = new MainClass();
-        Assert.assertEquals("Метод getLocalNumber не возвращает число 14", 14, mainClass.getLocalNumber());
+        Assert.assertEquals("Метод getLocalNumber не возвращает число 14", 14, getLocalNumber());
+    }
+
+    @Test
+    public void testGetClassNumber() {
+        Assert.assertTrue("Метод getClassNumber вернул значение не больше 45", getClassNumber() <= 45);
     }
 }
