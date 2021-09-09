@@ -12,4 +12,9 @@ public class MainClassTest extends MainClass {
     public void testGetClassNumber() {
         Assert.assertTrue("Метод getClassNumber вернул число не больше 45: " + getClassNumber(), getClassNumber() > 45);
     }
+
+    @Test
+    public void testGetClassString() {
+        Assert.assertTrue("Метод getClassString возвращает строку, в которой нет подстроки hello ли Hello", getClassString().toLowerCase().contains("hello"));
+    }
 }
