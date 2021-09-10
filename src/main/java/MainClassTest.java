@@ -15,6 +15,7 @@ public class MainClassTest extends MainClass {
 
     @Test
     public void testGetClassString() {
-        Assert.assertTrue("Метод getClassString возвращает строку, в которой нет подстроки hello ли Hello", getClassString().toLowerCase().contains("hello"));
+        Assert.assertTrue("Метод getClassString возвращает строку, в которой нет подстроки hello ли Hello: " + getClassString(),
+                getClassString().contains("Hello") || getClassString().contains("hello"));
     }
 }
